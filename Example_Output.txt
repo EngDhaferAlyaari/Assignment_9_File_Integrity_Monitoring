@@ -1,0 +1,23 @@
+Assignment 9 - File Integrity Monitoring
+Local demonstration (no external files are modified)
+
+1. First check
+Status: BASELINE
+BASELINE CREATED
+SHA-256: 14422ac8c3a16b31bb840394f2afe26b696fe97e43a89433accf460d5398be09
+
+2. No change
+Status: OK
+No changes detected. SHA-256: 14422ac8c3a16b31bb840394f2afe26b696fe97e43a89433accf460d5398be09
+
+3. Change one character
+Status: ALERT
+CRITICAL ALERT! File content has changed!
+Original SHA-256: 14422ac8c3a16b31bb840394f2afe26b696fe97e43a89433accf460d5398be09
+Current  SHA-256: 7eb89073da393c1cc00404aa112220d6863d544a18459a6bf59239ac272ff75b
+
+4. Restore original file
+Status: OK
+No changes detected. SHA-256: 14422ac8c3a16b31bb840394f2afe26b696fe97e43a89433accf460d5398be09
+
+Demo completed.

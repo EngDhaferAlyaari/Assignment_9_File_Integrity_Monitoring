@@ -1,0 +1,35 @@
+test_append_detected (test_fim_monitor.FileIntegrityTests.test_append_detected) ... ok
+test_baseline_survives_second_call (test_fim_monitor.FileIntegrityTests.test_baseline_survives_second_call) ... ok
+test_baseline_unchanged_on_alert (test_fim_monitor.FileIntegrityTests.test_baseline_unchanged_on_alert) ... ok
+test_binary_mode_handles_null_bytes (test_fim_monitor.FileIntegrityTests.test_binary_mode_handles_null_bytes) ... ok
+test_cannot_read_file_error (test_fim_monitor.FileIntegrityTests.test_cannot_read_file_error) ... ok
+test_chunked_large_file (test_fim_monitor.FileIntegrityTests.test_chunked_large_file) ... ok
+test_corrupt_baseline_error (test_fim_monitor.FileIntegrityTests.test_corrupt_baseline_error) ... ok
+test_different_paths_unique_baselines (test_fim_monitor.FileIntegrityTests.test_different_paths_unique_baselines) ... ok
+test_empty_file (test_fim_monitor.FileIntegrityTests.test_empty_file) ... ok
+test_explicit_reset (test_fim_monitor.FileIntegrityTests.test_explicit_reset) ... ok
+test_first_check_creates_baseline (test_fim_monitor.FileIntegrityTests.test_first_check_creates_baseline) ... ok
+test_interval_validation (test_fim_monitor.FileIntegrityTests.test_interval_validation) ... ok
+test_log_written_when_alert (test_fim_monitor.FileIntegrityTests.test_log_written_when_alert) ... ok
+test_loop_checks_repeatedly (test_fim_monitor.FileIntegrityTests.test_loop_checks_repeatedly) ... ok
+test_main_once_cli (test_fim_monitor.FileIntegrityTests.test_main_once_cli) ... ok
+test_main_rejects_zero_interval (test_fim_monitor.FileIntegrityTests.test_main_rejects_zero_interval) ... ok
+test_malformed_hash_error (test_fim_monitor.FileIntegrityTests.test_malformed_hash_error) ... ok
+test_missing_file_with_baseline (test_fim_monitor.FileIntegrityTests.test_missing_file_with_baseline) ... ok
+test_missing_file_without_baseline (test_fim_monitor.FileIntegrityTests.test_missing_file_without_baseline) ... ok
+test_one_time_baseline_exit_zero (test_fim_monitor.FileIntegrityTests.test_one_time_baseline_exit_zero) ... ok
+test_one_time_missing_exit_two (test_fim_monitor.FileIntegrityTests.test_one_time_missing_exit_two) ... ok
+test_one_time_ok_exit_zero (test_fim_monitor.FileIntegrityTests.test_one_time_ok_exit_zero) ... ok
+test_original_restored_ok (test_fim_monitor.FileIntegrityTests.test_original_restored_ok) ... ok
+test_repeated_alert_is_not_spammed (test_fim_monitor.FileIntegrityTests.test_repeated_alert_is_not_spammed) ... ok
+test_same_length_change_detected (test_fim_monitor.FileIntegrityTests.test_same_length_change_detected) ... ok
+test_saved_baseline_valid_json (test_fim_monitor.FileIntegrityTests.test_saved_baseline_valid_json) ... ok
+test_sha256_matches_python (test_fim_monitor.FileIntegrityTests.test_sha256_matches_python) ... ok
+test_single_character_change_alert (test_fim_monitor.FileIntegrityTests.test_single_character_change_alert) ... ok
+test_truncation_detected (test_fim_monitor.FileIntegrityTests.test_truncation_detected) ... ok
+test_unchanged_file_ok (test_fim_monitor.FileIntegrityTests.test_unchanged_file_ok) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.037s
+
+OK

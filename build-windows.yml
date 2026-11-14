@@ -1,0 +1,63 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fim_monitor.py'
+      - 'test_fim_monitor.py'
+      - 'test_built_exe.py'
+      - 'demo_integrity.py'
+      - 'sample_monitored.txt'
+      - '.github/workflows/build-windows.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Get files
+        uses: actions/checkout@v7
+
+      - name: Install Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Test Python program
+        run: python -m unittest -v test_fim_monitor.py
+
+      - name: Install PyInstaller
+        run: python -m pip install --disable-pip-version-check pyinstaller
+
+      - name: Build Windows EXE
+        run: python -m PyInstaller --onefile --console --name FIM_Monitor fim_monitor.py
+
+      - name: Test the real Windows EXE
+        run: python test_built_exe.py
+
+      - name: Upload Windows EXE as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: FIM_Monitor_Windows
+          path: dist/FIM_Monitor.exe
+          if-no-files-found: error
+
+      - name: Add EXE to repository automatically
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          Copy-Item dist/FIM_Monitor.exe FIM_Monitor.exe -Force
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add FIM_Monitor.exe
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "EXE already exists. No commit needed."
+            exit 0
+          }
+          git commit -m "Add Windows FIM Monitor executable [skip ci]"
+          git push

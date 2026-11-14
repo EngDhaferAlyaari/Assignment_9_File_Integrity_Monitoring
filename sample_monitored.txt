@@ -1,0 +1,3 @@
+Security log - original data
+This file is used to demonstrate SHA-256 integrity monitoring.
+Edit one character after starting the program to see a CRITICAL ALERT.

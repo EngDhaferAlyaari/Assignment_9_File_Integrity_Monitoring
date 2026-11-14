@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.fim_baselines/
+.fim_data/
+build/
+dist/
+*.spec
+*.tmp
